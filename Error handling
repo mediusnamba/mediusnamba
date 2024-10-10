@@ -1,0 +1,16 @@
+public class ErrorHandlingExample {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3};
+
+        try {
+            // Intentionally causing an ArrayIndexOutOfBoundsException
+            System.out.println("Accessing element: " + numbers[3]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // Handling the exception
+            System.out.println("Error: Attempted to access an invalid index.");
+        } finally {
+            // This block will execute regardless of whether an exception occurred or not
+            System.out.println("Execution completed.");
+        }
+    }
+}
